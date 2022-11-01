@@ -1,19 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        :root {
+            --white : #ffffff;
+            --black : #000000;
+            --very-light-pink : #C7C7C7;
+            --text-input-field : #f7f7f7;
+            --hospital-green : #acd9b2;
+            --sm : 14px;
+            --md : 16px;
+            --lg : 18px;
+
+        }
+        body{
+            margin: 0;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .title {
+            font-size: var(--lg);
+            color:#acd9b2;
+            margin-bottom: 12px;
+            text-align: center;
+
+        }
+        .subtitle {
+            color :var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 300 ;
+            margin-top: 0;
+            margin-bottom: 35px;
+            text-align: center;
+
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+
+        }
+        
+       
+        
+        
+
+        @media (max-width:640px) {
+            .logo{
+                display: block;
+            }
+            
+        }
+        .forgotmypassword {
+            text-align: center;
+            
+        }
+        .forgotmypassword a{
+            color: var(--hospital-green);
+
+        }
+        .transac-up {
+            background-color: var(--white);
+            border-radius:  8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--black);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            position: relative;
+            top: 100px;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius:  8px;
+            border: none;
+            color: #ffffff;
+            width: 100%;
+            grid-column: 3 / 3;
+            grid-row: 1/ 2;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        #header{
+            display: grid;
+            border:#acd9b2;
+            grid-template-columns: repeat(2, 2fr);
+            grid-gap: 10px;
+            position: relative;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        #nameuser{
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            font-size: large;
+            grid-gap: 0px;
+            position: center;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        #content{
+        border:#acd9b2;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <fieldset>
-        <button type="submit" id="btn-logout">logout</button>
-    </fieldset>
-    <fieldset id="content">
-        
-    </fieldset>
+    <div class="transac-up">
+        <h1 class="title">Transacciones</h1>
+        <fieldset id="header">
+            <img id="picture" src="" alt="Usuario">
+            <label class="" id="nameuser" class=""></label>
+            <input id="btn-logout" type="submit" class="primary-button" value="logout">
+    
+        </fieldset>
+        <fieldset id="content">
+            
+        </fieldset>
 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
     <script src="transaction.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@ fetch(url)
     console.log(users)
 })
 
+
 u('#login-btn').on('click', function(e) {
     e.preventDefault();
     let form = u(this).parent()
@@ -25,6 +26,7 @@ u('#login-btn').on('click', function(e) {
         window.sessionStorage.setItem('user', JSON.stringify(matchuser[0]))
         window.location.href = '/transactions.html'
     } else {
-        alert(',al usuario')
+        alert('Mal Ingreso de credenciaels')
     }
 })
+
