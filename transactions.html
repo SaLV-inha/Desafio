@@ -13,67 +13,20 @@
             --lg : 18px;
 
         }
-        body{
-            margin: 0;
-            font-family: 'Dosis', sans-serif;
-        }
-
-        .title {
-            font-size: var(--lg);
-            color:#acd9b2;
-            margin-bottom: 12px;
-            text-align: center;
-
-        }
-        .subtitle {
-            color :var(--very-light-pink);
-            font-size: var(--md);
-            font-weight: 300 ;
-            margin-top: 0;
-            margin-bottom: 35px;
-            text-align: center;
-
-        }
-        .label {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-
-        }
-        
-       
-        
-        
-
-        @media (max-width:640px) {
-            .logo{
-                display: block;
-            }
-            
-        }
-        .forgotmypassword {
-            text-align: center;
-            
-        }
-        .forgotmypassword a{
-            color: var(--hospital-green);
-
-        }
         .transac-up {
             background-color: var(--white);
-            border-radius:  8px;
-            border: 1px solid var(--hospital-green);
+            border-radius:  6px;
+            border-style:initial;
             color: var(--black);
             width: 100%;
             cursor: pointer;
-            font-size: var(--md);
             font-weight: bold;
             height: 50px;
             position: relative;
             top: 100px;
         }
         .primary-button {
-            background-color: var(--hospital-green);
+            background-color: var(--very-light-pink);
             border-radius:  8px;
             border: none;
             color: #ffffff;
@@ -95,14 +48,25 @@
         }
         #nameuser{
             display: grid;
-            grid-template-columns: repeat(3, 2fr);
-            font-size: large;
-            grid-gap: 0px;
-            position: center;
-            grid-auto-rows: minmax(100px, auto);
+            font-weight: bolder ;
+            font-size:x-large;
         }
         #content{
         border:#acd9b2;
+        }
+        .transactions{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            border-width: 5em;
+            font-size: var(--sm);
+            padding: 6px ;
+            margin-bottom: 12px ;
+            
+        }
+        #picture{
+            border-radius: 15%;
+
         }
     </style>
     <meta charset="UTF-8">
@@ -112,11 +76,10 @@
 </head>
 <body>
     <div class="transac-up">
-        <h1 class="title">Transacciones</h1>
         <fieldset id="header">
             <img id="picture" src="" alt="Usuario">
-            <label class="" id="nameuser" class=""></label>
-            <input id="btn-logout" type="submit" class="primary-button" value="logout">
+            <label class="header" id="nameuser"></label>
+            <input id="btn-logout" type="submit"  class="primary-button" value="logout">
     
         </fieldset>
         <fieldset id="content">
