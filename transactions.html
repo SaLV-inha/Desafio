@@ -1,74 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        :root {
-            --white : #ffffff;
-            --black : #000000;
-            --very-light-pink : #C7C7C7;
-            --text-input-field : #f7f7f7;
-            --hospital-green : #acd9b2;
-            --sm : 14px;
-            --md : 16px;
-            --lg : 18px;
-
-        }
-        .transac-up {
-            background-color: var(--white);
-            border-radius:  6px;
-            border-style:initial;
-            color: var(--black);
-            width: 100%;
-            cursor: pointer;
-            font-weight: bold;
-            height: 50px;
-            position: relative;
-            top: 100px;
-        }
-        .primary-button {
-            background-color: var(--very-light-pink);
-            border-radius:  8px;
-            border: none;
-            color: #ffffff;
-            width: 100%;
-            grid-column: 3 / 3;
-            grid-row: 1/ 2;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
-        }
-        #header{
-            display: grid;
-            border:#acd9b2;
-            grid-template-columns: repeat(2, 2fr);
-            grid-gap: 10px;
-            position: relative;
-            grid-auto-rows: minmax(100px, auto);
-        }
-        #nameuser{
-            display: grid;
-            font-weight: bolder ;
-            font-size:x-large;
-        }
-        #content{
-        border:#acd9b2;
-        }
-        .transactions{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            border-width: 5em;
-            font-size: var(--sm);
-            padding: 6px ;
-            margin-bottom: 12px ;
-            
-        }
-        #picture{
-            border-radius: 15%;
-
-        }
-    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,8 +12,9 @@
             <img id="picture" src="" alt="Usuario">
             <label class="header" id="nameuser"></label>
             <input id="btn-logout" type="submit"  class="primary-button" value="logout">
-    
+
         </fieldset>
+        <br>
         <fieldset id="content">
             
         </fieldset>
