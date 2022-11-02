@@ -1,5 +1,5 @@
 if(!window.sessionStorage.getItem('user')){
-    window.location.href = '/index2.html'
+    window.location.href = './index2.html'
 }
 
 const user = JSON.parse(window.sessionStorage.getItem('user'))
