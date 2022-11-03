@@ -1,5 +1,5 @@
 if (!window.sessionStorage.getItem('user')) {
-    window.location.href = './index2.html'
+    window.location.href = '/'
 }
 const user = JSON.parse(window.sessionStorage.getItem('user'))
 
@@ -11,7 +11,7 @@ fetch('https://635fe51f3e8f65f283be4b05.mockapi.io/users/' + user.id + '/transac
     nameuser.innerHTML = `Hola,  ${user.name}`
     contenidodatos=u('fieldset#content li')
 
-    let datospie = []
+    
     let depositos = 0
     let pagos = 0
     let otros = 0
@@ -44,7 +44,6 @@ fetch('https://635fe51f3e8f65f283be4b05.mockapi.io/users/' + user.id + '/transac
         let total = ingresos - pagos
         u('#movimientos').text(`Ingresos: $${depositos} `)
         u('#movimientos').append(`Egresos: $${pagos} `)
-        u('#movimientos').append(`TOTAL: $${total} `)
         u('#saldo').text(`$${total}`)
        
         var data = [{
@@ -65,7 +64,7 @@ fetch('https://635fe51f3e8f65f283be4b05.mockapi.io/users/' + user.id + '/transac
 u('#btn-logout').on('click', function (e) {
     e.preventDefault();
     window.sessionStorage.removeItem("user")
-    window.location.href = './index2.html'
+    window.location.href = './index.html'
 
 })
 

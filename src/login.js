@@ -1,5 +1,5 @@
 const url = 'https://635fe51f3e8f65f283be4b05.mockapi.io/users'
-const trsnsacciones = 'https://635fe51f3e8f65f283be4b05.mockapi.io/users/1/transactions'
+// const trsnsacciones = 'https://635fe51f3e8f65f283be4b05.mockapi.io/users/1/transactions'
 
 if(window.sessionStorage.getItem('user')){
     window.location.href = './transactions.html'
