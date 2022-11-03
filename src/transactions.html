@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <style>
-        :root {
-            --white : #ffffff;
-            --black : #000000;
-            --very-light-pink : #C7C7C7;
-            --text-input-field : #f7f7f7;
-            --hospital-green : #acd9b2;
-            --sm : 14px;
-            --md : 16px;
-            --lg : 18px;
-
+        body{
+            width: 100%;
+            height: 50%;
+            border-radius: 50%;
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            margin-bottom: px;
+        
+        
         }
+        
         .transac-up {
             background-color: var(--white);
             border-radius:  6px;
-            color: var(--black);
-            width:100%;
+            color:#504f4f;
+            width:80%;
             cursor: pointer;
             font-weight: bold;
             height: 1px;
             margin-top: 6px;
             top: 100px;
+            
         }
         .btn {
             background-color: var(--very-light-pink);
@@ -36,6 +39,7 @@
             font-size: var(--md);
             font-weight: bold;
             height: 50px;
+            
         }
         
         #nameuser{
@@ -45,6 +49,7 @@
         }
         #content{
         border:#acd9b2;
+        
         }
         .transactions{
             background-color: var(--text-input-field);
@@ -60,7 +65,18 @@
             border-radius: 5%;
 
         }
+        .information-bar{
+            width: 15rem;
+            height: 30%;
+            border-radius: 20px;
+            border-left: 10px;
+            background-color:lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: right ;
+            margin-bottom: 50px;
         
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -71,58 +87,58 @@
 <body>
     
     <div class="transac-up">
-
+        
         <fieldset id="header" class="container text-center ">
-           
+            
             <div class="row">
-
+                
                 <div class="col ">
-
+                    
                     <img id="picture" src="" alt="Usuario">
-
+                    
                 </div>
 
                 <div class="col-6">
                     
                     <label class="header" id="nameuser"></label>
-
+                    
                 </div>
-
+                
                 <div class="col">
-                   
-                    <input id="btn-logout" type="submit"  class="btn btn-outline-secondary " value="Logout" data-bs-toggle="tooltip" data-bs-placement="top"
+                    
+                    <input id="btn-logout" type="submit"  class="btn btn-outline-secondary" value="Logout" data-bs-toggle="tooltip" data-bs-placement="top"
                     data-bs-custom-class="custom-tooltip"
                     data-bs-title="Cerrar Sesion.">
-
+                    
                 </div>
-
-            </div>
-    
                 
+                
+            </div>
+            
+            
         </fieldset>
         <fieldset id="content">
-           <!--d-none va dentro de li class-->
-            <li class=" d-flex justify-content-between align-items-center" >
+            <!--d-none va dentro de li class-->
+            <li class=" d-flex justify-content-between align-items-center shadow p-1 mb-1 bg-body rounded" >
                 
                 <div  class=" ms-2 me-auto">
                     <div class="fw-bold trxcreatedAt">
-
+                        
                     </div>
                     <p class="titulo">
-
+                        
                     </p>
-                    <div class="collapse description" >
-                        <div class=" ">
-
+                    <div class="collapse" >
+                        <div class="description">
+                            
                         </div>
                     </div>
                 </div>
                 <span class="amount"> </span>
-
-            </li>
-            
+                
+            </li>            
         </fieldset> 
-    </div>
+    </div>   
     <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="transaction.js"></script>
