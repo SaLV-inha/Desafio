@@ -44,3 +44,19 @@ y asi podriamos usar la app.
 Del lado del Front-end un diseño muy discreto.
 
 Del lado del Back-end la logica necesaria.
+
+
+**Tech Stack**
+
+
+
+  -[Umbrella JS](https://umbrellajs.com/documentation "Umbrella JS")
+ 
+  -[Plotly](https://plotly.com/javascript/ "Plotly")
+ 
+  -[Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/ "Bootstrap")
+ 
+
+
+
+
