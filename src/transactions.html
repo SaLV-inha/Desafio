@@ -3,123 +3,70 @@
 <head>
     <style>
         body{
-            width: 100%;
-            height: 50%;
-            border-radius: 50%;
-            background-color:black;
-            display: flex;
-            justify-content: center;
-            align-items: center ;
-            margin-bottom: px;
-        
-        
-        }
-        
-        .transac-up {
-            background-color: var(--white);
-            border-radius:  6px;
-            color:#504f4f;
-            width:80%;
-            cursor: pointer;
-            font-weight: bold;
-            height: 1px;
-            margin-top: 6px;
-            top: 100px;
-            
-        }
-        .btn {
-            background-color: var(--very-light-pink);
-            border-radius:  8px;
-            border: none;
-            color: #ffffff;
-            width: 100%;
-            grid-column: 3 / 3;
-            grid-row: 1/ 2;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
-            
-        }
-        
-        #nameuser{
-            display: grid;
-            font-weight: bolder ;
-            font-size:x-large;
-        }
-        #content{
-        border:#acd9b2;
-        
-        }
-        .transactions{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            border-width: 1em;
-            font-size: var(--sm);
-            padding: 6px ;
-            margin-bottom: 12px ;
-            
+            font-family: 'Quicksand', sans-serif;
+            padding: 5%;
         }
         #picture{
             border-radius: 5%;
-
         }
-        .information-bar{
-            width: 15rem;
-            height: 30%;
-            border-radius: 20px;
-            border-left: 10px;
-            background-color:lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: right ;
-            margin-bottom: 50px;
         
-        }
-    </style>
+        </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     
-    <div class="transac-up">
+    <div class="transac-up ">
+        <div class="col">
+            <a id="btn-logout" type="submit" value="Logout" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Cerrar Sesion." ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-escape" viewBox="0 0 16 16">
+                <path d="M8.538 1.02a.5.5 0 1 0-.076.998 6 6 0 1 1-6.445 6.444.5.5 0 0 0-.997.076A7 7 0 1 0 8.538 1.02Z"/>
+                <path d="M7.096 7.828a.5.5 0 0 0 .707-.707L2.707 2.025h2.768a.5.5 0 1 0 0-1H1.5a.5.5 0 0 0-.5.5V5.5a.5.5 0 0 0 1 0V2.732l5.096 5.096Z"/>
+              </svg> Logout</a>
+        </div>
         
         <fieldset id="header" class="container text-center ">
             
-            <div class="row">
-                
-                <div class="col ">
-                    
+            <div class="container text-center">
+                <div class="row align-items-center">
+                  <div class="col">
                     <img id="picture" src="" alt="Usuario">
-                    
+                  </div>
+                  <div class="col">
+                    <h4><label class="header" id="nameuser"></label></h4>
                 </div>
-
-                <div class="col-6">
-                    
-                    <label class="header" id="nameuser"></label>
-                    
-                </div>
-                
                 <div class="col">
-                    
-                    <input id="btn-logout" type="submit"  class="btn btn-outline-secondary" value="Logout" data-bs-toggle="tooltip" data-bs-placement="top"
-                    data-bs-custom-class="custom-tooltip"
-                    data-bs-title="Cerrar Sesion.">
-                    
+                    <h3><p class="trans col align-self-center">Transacciones</p></h4>
+                  </div>
                 </div>
-                
-                
-            </div>
-            
-            
+     
         </fieldset>
+        <div  class="container text-center">
+            
+                <div class="row">
+                  <div class="col align-self-center bold">
+                    <h4>Saldo Disponible</h5>
+                    <h1><p id="saldo"></p></h1>
+                  </div>
+                  <div  id='myDiv' class="col align-self-center">
+                  
+                  </div>
+                  <div class="col align-self-center">
+                    <p id="movimientos"></p>
+                  </div>
+                </div>
+              </div>
+
+        
         <fieldset id="content">
+            
             <!--d-none va dentro de li class-->
-            <li class=" d-flex justify-content-between align-items-center shadow p-1 mb-1 bg-body rounded" >
+            <li class="d-none d-flex justify-content-between align-items-center shadow p-1 mb-1 bg-body rounded" >
                 
                 <div  class=" ms-2 me-auto">
                     <div class="fw-bold trxcreatedAt">
@@ -139,6 +86,7 @@
             </li>            
         </fieldset> 
     </div>   
+    
     <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="transaction.js"></script>
