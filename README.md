@@ -1,7 +1,7 @@
 # APP
 -Demostracion de la Aplicaión.
  
-[Aplicacion](https://salv-inha.github.io/Desafio/src/index2.html "Aplicacion")
+[Aplicacion](https://salv-inha.github.io/Desafio/src/ "Aplicacion")
 
 
 
@@ -38,7 +38,7 @@ GitHub CLI
 
 Esto instala rodas las dependencias necesarias para el correcto funcionamiento de la aplicación
 
-- Luego correr el archivo **index2.html** en liveserver.
+- Luego correr el archivo **index.html** en liveserver.
 y asi podriamos usar la app.
 
 Del lado del Front-end un diseño muy discreto.
