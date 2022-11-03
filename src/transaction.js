@@ -33,7 +33,7 @@ fetch('https://635fe51f3e8f65f283be4b05.mockapi.io/users/' + user.id + '/transac
                 clon.find('.amount').text('+'+item.amount).addClass('fw-bold text-success fs-5')
                 
             } 
-            if (item.description.includes("pay")) {
+            if (item.description.includes("pay")||item.description.includes("withdrawal")) {
                 clon.find('.amount').text('-'+item.amount).addClass('fw-bold text-danger fs-5')
             } if (item.description.includes("invoice")) {
                 clon.find('.amount').text(+item.amount).addClass('fw-bold text-secondary fs-5')
