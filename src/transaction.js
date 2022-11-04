@@ -1,5 +1,5 @@
 if (!window.sessionStorage.getItem('user')) {
-    window.location.href = '/'
+    window.location.href = './'
 }
 const user = JSON.parse(window.sessionStorage.getItem('user'))
 
@@ -39,7 +39,10 @@ fetch('https://635fe51f3e8f65f283be4b05.mockapi.io/users/' + user.id + '/transac
                 otros += parseInt(item.amount)
             }        
             
-        });    
+        });   
+        var ultimateColors = [
+            ['rgb(105, 210, 231)', 'rgb(167, 219, 216)', 'rgb(224, 228, 204)', 'rgb(243, 134, 548)', 'rgb(6, 4, 4)']
+          ];
         let ingresos = depositos + otros
         let total = ingresos - pagos
         u('#movimientos').text(`Ingresos: $${depositos} `)
@@ -49,7 +52,10 @@ fetch('https://635fe51f3e8f65f283be4b05.mockapi.io/users/' + user.id + '/transac
         var data = [{
             values: [ingresos, pagos],
             labels: ['Depositos', 'Pagos o Retiros'],
-            type: 'pie'
+            type: 'pie',
+            marker: {
+                colors: ultimateColors[0]
+              },
           }];
           
           var layout = {
