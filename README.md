@@ -1,5 +1,5 @@
 # APP
--Demostracion de la Aplicaión.
+-Demostración de la Aplicaión.
  
 [Aplicacion](https://salv-inha.github.io/Desafio/src/ "Aplicacion")
 
@@ -36,10 +36,10 @@ GitHub CLI
 
 `npm install`
 
-Esto instala rodas las dependencias necesarias para el correcto funcionamiento de la aplicación
+Esto instala todas las dependencias necesarias para el correcto funcionamiento de la aplicación
 
 - Luego correr el archivo **index.html** en liveserver.
-y asi podriamos usar la app.
+y así podriamos usar la app.
 
 Del lado del Front-end un diseño muy discreto.
 
